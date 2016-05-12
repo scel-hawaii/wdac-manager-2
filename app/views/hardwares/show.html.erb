@@ -32,15 +32,12 @@
        <tr>
          <td><%= part["name"] %></td>
          <td><%= part["description"] %></td>
-         <td><%= link_to 'Edit', edit_part_path(part, :hardware_id => @hardware.id, :hardware_name => @hardware.name) %></td>
-         <td><%= link_to 'Destroy', part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
        </tr>
      <% end %>
    <% end %>
   </tbody>
 </table>
 
-<%= link_to 'Add Part', new_part_path(:hardware_id => @hardware.id, :hardware_name => @hardware.name ) %>
 <br>
 <br>
 <%= link_to 'Edit', edit_hardware_path(@hardware) %> |

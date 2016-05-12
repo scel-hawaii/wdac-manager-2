@@ -1,0 +1,55 @@
+<%= form_for(@hardware) do |f| %>
+  <% if @hardware.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hardware.errors.count, "error") %> prohibited this hardware from being saved:</h2>
+
+      <ul>
+      <% @hardware.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+  <p>
+    <strong>Parts:</strong>
+  </p>
+  <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Part Name</th>
+      <th>Part Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+   <% @hardware.parts.each do |part| %>
+     <% if part.hardware_id == @hardware.id%>
+       <tr>
+         <td><%= part["name"] %></td>
+         <td><%= part["description"] %></td>
+         <td><%= link_to 'Edit', edit_part_path(part, :hardware_id => @hardware.id, :hardware_name => @hardware.name) %></td>
+         <td><%= link_to 'Destroy', part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       </tr>
+     <% end %>
+   <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Add Part', new_part_path(:hardware_id => @hardware.id, :hardware_name => @hardware.name ) %>
+
+<br />
+<br />
