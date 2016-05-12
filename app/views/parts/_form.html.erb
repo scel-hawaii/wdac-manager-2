@@ -21,7 +21,8 @@
   </div>
   <div class="field">
     <%= f.label :hardware_id %><br>
-    <%= f.select(:hardware_id, Hardware.all.collect {|p| [p.name, p.id] }, include_blank: 'None') %>
+    <%= params[:hardware_name] %>
+    <%= f.hidden_field :hardware_id, :value => params[:hardware_id] %>
   <div class="actions">
     <%= f.submit %>
   </div>
