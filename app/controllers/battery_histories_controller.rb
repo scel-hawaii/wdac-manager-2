@@ -69,6 +69,6 @@ class BatteryHistoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def battery_history_params
-      params.require(:battery_history).permit(:battery_id, :type, :initial_use, :weatherbox_id)
+      params.require(:battery_history).permit(:battery_id, :battery_type, :initial_use, :weatherbox_id)
     end
 end

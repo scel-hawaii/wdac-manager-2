@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512013057) do
+ActiveRecord::Schema.define(version: 20160512025420) do
 
   create_table "battery_histories", force: :cascade do |t|
     t.integer  "battery_id"
-    t.string   "type"
+    t.string   "battery_type"
     t.date     "initial_use"
     t.integer  "weatherbox_id"
     t.datetime "created_at",    null: false
