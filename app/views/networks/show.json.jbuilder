@@ -1,1 +1,1 @@
-json.extract! @network, :id, :network_id, :description, :created_at, :updated_at
+json.extract! @network, :id, :description, :created_at, :updated_at

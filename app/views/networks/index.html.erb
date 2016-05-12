@@ -14,7 +14,7 @@
   <tbody>
     <% @networks.each do |network| %>
       <tr>
-        <td><%= network.network_id %></td>
+        <td><%= network.id %></td>
         <td><%= network.description %></td>
         <td><%= link_to 'Show', network %></td>
         <td><%= link_to 'Edit', edit_network_path(network) %></td>

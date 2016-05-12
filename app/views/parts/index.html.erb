@@ -15,7 +15,7 @@
   <tbody>
     <% @parts.each do |part| %>
       <tr>
-        <td><%= part.part_id %></td>
+        <td><%= part["id"] %></td>
         <td><%= part.name %></td>
         <td><%= part.description %></td>
         <td><%= link_to 'Show', part %></td>

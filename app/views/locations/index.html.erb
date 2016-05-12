@@ -16,7 +16,7 @@
   <tbody>
     <% @locations.each do |location| %>
       <tr>
-        <td><%= location.location_id %></td>
+        <td><%= location["id"] %></td>
         <td><%= location.building_name %></td>
         <td><%= location.address %></td>
         <td><%= location.gps_coordinates %></td>

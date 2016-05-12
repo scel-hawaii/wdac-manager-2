@@ -15,7 +15,7 @@
   <tbody>
     <% @softwares.each do |software| %>
       <tr>
-        <td><%= software.software_id %></td>
+        <td><%= software["id"] %></td>
         <td><%= software.version %></td>
         <td><%= software.notes %></td>
         <td><%= link_to 'Show', software %></td>

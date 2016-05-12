@@ -69,6 +69,6 @@ class SoftwaresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def software_params
-      params.require(:software).permit(:software_id, :version, :notes)
+      params.require(:software).permit(:version, :notes)
     end
 end

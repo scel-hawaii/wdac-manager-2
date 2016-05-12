@@ -15,7 +15,7 @@
   <tbody>
     <% @hardwares.each do |hardware| %>
       <tr>
-        <td><%= hardware.hardware_id %></td>
+        <td><%= hardware["id"] %></td>
         <td><%= hardware.name %></td>
         <td><%= hardware.notes %></td>
         <td><%= link_to 'Show', hardware %></td>

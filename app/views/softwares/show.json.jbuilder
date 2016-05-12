@@ -1,1 +1,1 @@
-json.extract! @software, :id, :software_id, :version, :notes, :created_at, :updated_at
+json.extract! @software, :id, :version, :notes, :created_at, :updated_at

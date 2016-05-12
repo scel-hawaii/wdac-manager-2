@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512025420) do
+ActiveRecord::Schema.define(version: 20160512052715) do
 
   create_table "battery_histories", force: :cascade do |t|
     t.integer  "battery_id"
@@ -30,11 +30,10 @@ ActiveRecord::Schema.define(version: 20160512025420) do
   end
 
   create_table "hardwares", force: :cascade do |t|
-    t.integer  "hardware_id"
     t.string   "name"
     t.string   "notes"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "issues", force: :cascade do |t|
@@ -49,7 +48,6 @@ ActiveRecord::Schema.define(version: 20160512025420) do
   end
 
   create_table "locations", force: :cascade do |t|
-    t.integer  "location_id"
     t.string   "building_name"
     t.string   "address"
     t.string   "gps_coordinates"
@@ -58,14 +56,12 @@ ActiveRecord::Schema.define(version: 20160512025420) do
   end
 
   create_table "networks", force: :cascade do |t|
-    t.integer  "network_id"
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "parts", force: :cascade do |t|
-    t.integer  "part_id"
     t.string   "name"
     t.string   "description"
     t.datetime "created_at",  null: false
@@ -73,11 +69,10 @@ ActiveRecord::Schema.define(version: 20160512025420) do
   end
 
   create_table "softwares", force: :cascade do |t|
-    t.integer  "software_id"
     t.string   "version"
     t.string   "notes"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "weatherboxes", force: :cascade do |t|
