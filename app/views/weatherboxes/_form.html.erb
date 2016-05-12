@@ -17,15 +17,15 @@
   </div>
   <div class="field">
     <%= f.label :hardware_id %><br>
-    <%= f.number_field :hardware_id %>
+    <%= f.select(:hardware_id, Hardware.all.collect {|p| [p.name, p.id]}, include_blank: 'None') %>
   </div>
   <div class="field">
     <%= f.label :software_id %><br>
-    <%= f.number_field :software_id %>
+    <%= f.select(:software_id, Software.all.collect {|p| [p.version, p.id ] }, include_blank: 'None') %>
   </div>
   <div class="field">
     <%= f.label :network_id %><br>
-    <%= f.number_field :network_id %>
+    <%= f.select(:network_id, Network.all.collect {|p| [p.network_id, p.id ] }, include_blank: 'None') %>
   </div>
   <div class="field">
     <%= f.label :xbee_address %><br>
@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :location_id %><br>
-    <%= f.number_field :location_id %>
+    <%= f.select(:location_id, Location.all.collect {|p| [p.building_name, p.id] }, include_blank: 'None') %>
   </div>
   <div class="actions">
     <%= f.submit %>

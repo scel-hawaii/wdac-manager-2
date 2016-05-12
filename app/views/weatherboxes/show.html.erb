@@ -7,12 +7,16 @@
 
 <p>
   <strong>Hardware:</strong>
-  <%= @weatherbox.hardware_id %>
+  <% if !@weatherbox.hardware.nil? %>
+    <%= @weatherbox.hardware["name"] %>
+  <% end %>
 </p>
 
 <p>
   <strong>Software:</strong>
-  <%= @weatherbox.software_id %>
+  <% if !@weatherbox.software.nil? %>
+    <%= @weatherbox.software["version"] %>
+  <% end %>
 </p>
 
 <p>
@@ -32,7 +36,23 @@
 
 <p>
   <strong>Location:</strong>
-  <%= @weatherbox.location_id %>
+  <% if !@weatherbox.location.nil? %>
+    <%= @weatherbox.location["building_name"] %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Battery Type:</strong>
+  <% if !@weatherbox.battery_history.nil? %>
+    <%= @weatherbox.battery_history["type"] %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Battery Inital Use:</strong>
+  <% if !@weatherbox.battery_history.nil? %>
+    <%= @weatherbox.battery_history["initial_use"] %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_weatherbox_path(@weatherbox) %> |

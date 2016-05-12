@@ -20,12 +20,24 @@
     <% @weatherboxes.each do |weatherbox| %>
       <tr>
         <td><%= weatherbox.box_id %></td>
-        <td><%= weatherbox.hardware_id %></td>
-        <td><%= weatherbox.software_id %></td>
+        <td>
+          <% if !weatherbox.hardware.nil? %>
+            <%= weatherbox.hardware["name"] %>
+          <% end %>
+        </td>
+        <td>
+          <% if !weatherbox.software.nil? %>
+            <%= weatherbox.software["version"] %>
+          <% end %>
+        </td>
         <td><%= weatherbox.network_id %></td>
         <td><%= weatherbox.xbee_address %></td>
         <td><%= weatherbox.node_type %></td>
-        <td><%= weatherbox.location_id %></td>
+        <td>
+          <% if !weatherbox.location.nil? %>
+            <%= weatherbox.location["building_name"] %>
+          <% end %>
+        </td>
         <td><%= link_to 'Show', weatherbox %></td>
         <td><%= link_to 'Edit', edit_weatherbox_path(weatherbox) %></td>
         <td><%= link_to 'Destroy', weatherbox, method: :delete, data: { confirm: 'Are you sure?' } %></td>
