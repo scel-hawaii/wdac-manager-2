@@ -30,7 +30,11 @@
             <%= weatherbox.software["version"] %>
           <% end %>
         </td>
-        <td><%= weatherbox.network_id %></td>
+        <td>
+          <% if !weatherbox.network.nil? %>
+            <%= weatherbox.network["network_id"] %>
+          <% end %>
+        </td>
         <td><%= weatherbox.xbee_address %></td>
         <td><%= weatherbox.node_type %></td>
         <td>

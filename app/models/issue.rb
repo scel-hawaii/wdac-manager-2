@@ -1,3 +1,3 @@
 class Issue < ActiveRecord::Base
-  has_many :weatherboxes
+  belongs_to :weatherbox
 end

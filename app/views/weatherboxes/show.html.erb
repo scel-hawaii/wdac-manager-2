@@ -21,7 +21,9 @@
 
 <p>
   <strong>Network:</strong>
-  <%= @weatherbox.network_id %>
+  <% if !@weatherbox.network.nil? %>
+    <%= @weatherbox.network["network_id"] %>
+  <% end %>
 </p>
 
 <p>

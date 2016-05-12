@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :weatherbox_id %><br>
-    <%= f.number_field :weatherbox_id %>
+    <%= f.select(:weatherbox_id, Weatherbox.all.collect {|p| [p.box_id, p.id]}) %>
   </div>
   <div class="field">
     <%= f.label :status %><br>
