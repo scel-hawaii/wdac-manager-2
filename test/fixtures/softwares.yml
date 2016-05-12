@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  software_id: 1
+  version: MyString
+  notes: MyString
+
+two:
+  software_id: 1
+  version: MyString
+  notes: MyString

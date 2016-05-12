@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Weatherboxes</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Box</th>
+      <th>Hardware</th>
+      <th>Software</th>
+      <th>Network</th>
+      <th>Xbee address</th>
+      <th>Node type</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weatherboxes.each do |weatherbox| %>
+      <tr>
+        <td><%= weatherbox.box_id %></td>
+        <td><%= weatherbox.hardware_id %></td>
+        <td><%= weatherbox.software_id %></td>
+        <td><%= weatherbox.network_id %></td>
+        <td><%= weatherbox.xbee_address %></td>
+        <td><%= weatherbox.node_type %></td>
+        <td><%= weatherbox.location_id %></td>
+        <td><%= link_to 'Show', weatherbox %></td>
+        <td><%= link_to 'Edit', edit_weatherbox_path(weatherbox) %></td>
+        <td><%= link_to 'Destroy', weatherbox, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Weatherbox', new_weatherbox_path %>

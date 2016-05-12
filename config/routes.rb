@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :battery_histories
+  resources :hardware_parts
+  resources :parts
+  resources :hardwares
+  resources :locations
+  resources :softwares
+  resources :issues
+  resources :networks
+  resources :weatherboxes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Battery:</strong>
+  <%= @battery_history.battery_id %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @battery_history.type %>
+</p>
+
+<p>
+  <strong>Initial use:</strong>
+  <%= @battery_history.initial_use %>
+</p>
+
+<p>
+  <strong>Weatherbox:</strong>
+  <%= @battery_history.weatherbox_id %>
+</p>
+
+<%= link_to 'Edit', edit_battery_history_path(@battery_history) %> |
+<%= link_to 'Back', battery_histories_path %>

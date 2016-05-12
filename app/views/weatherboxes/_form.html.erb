@@ -1,0 +1,45 @@
+<%= form_for(@weatherbox) do |f| %>
+  <% if @weatherbox.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@weatherbox.errors.count, "error") %> prohibited this weatherbox from being saved:</h2>
+
+      <ul>
+      <% @weatherbox.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :box_id %><br>
+    <%= f.number_field :box_id %>
+  </div>
+  <div class="field">
+    <%= f.label :hardware_id %><br>
+    <%= f.number_field :hardware_id %>
+  </div>
+  <div class="field">
+    <%= f.label :software_id %><br>
+    <%= f.number_field :software_id %>
+  </div>
+  <div class="field">
+    <%= f.label :network_id %><br>
+    <%= f.number_field :network_id %>
+  </div>
+  <div class="field">
+    <%= f.label :xbee_address %><br>
+    <%= f.text_field :xbee_address %>
+  </div>
+  <div class="field">
+    <%= f.label :node_type %><br>
+    <%= f.text_field :node_type %>
+  </div>
+  <div class="field">
+    <%= f.label :location_id %><br>
+    <%= f.number_field :location_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

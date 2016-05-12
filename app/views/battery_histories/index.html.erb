@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Battery Histories</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Battery</th>
+      <th>Type</th>
+      <th>Initial use</th>
+      <th>Weatherbox</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @battery_histories.each do |battery_history| %>
+      <tr>
+        <td><%= battery_history.battery_id %></td>
+        <td><%= battery_history.type %></td>
+        <td><%= battery_history.initial_use %></td>
+        <td><%= battery_history.weatherbox_id %></td>
+        <td><%= link_to 'Show', battery_history %></td>
+        <td><%= link_to 'Edit', edit_battery_history_path(battery_history) %></td>
+        <td><%= link_to 'Destroy', battery_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Battery history', new_battery_history_path %>

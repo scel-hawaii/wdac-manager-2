@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Box:</strong>
+  <%= @weatherbox.box_id %>
+</p>
+
+<p>
+  <strong>Hardware:</strong>
+  <%= @weatherbox.hardware_id %>
+</p>
+
+<p>
+  <strong>Software:</strong>
+  <%= @weatherbox.software_id %>
+</p>
+
+<p>
+  <strong>Network:</strong>
+  <%= @weatherbox.network_id %>
+</p>
+
+<p>
+  <strong>Xbee address:</strong>
+  <%= @weatherbox.xbee_address %>
+</p>
+
+<p>
+  <strong>Node type:</strong>
+  <%= @weatherbox.node_type %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @weatherbox.location_id %>
+</p>
+
+<%= link_to 'Edit', edit_weatherbox_path(@weatherbox) %> |
+<%= link_to 'Back', weatherboxes_path %>
