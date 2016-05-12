@@ -4,4 +4,5 @@ class Weatherbox < ActiveRecord::Base
   belongs_to :hardware
   belongs_to :software
   has_one :battery_history
+  has_many :issues
 end

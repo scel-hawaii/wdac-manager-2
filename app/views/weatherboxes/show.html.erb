@@ -55,5 +55,33 @@
   <% end %>
 </p>
 
+<p>
+  <strong>Issues:</strong>
+</p>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Issue ID</th>
+      <th>Issue Title</th>
+      <th>Issue Description</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+   <% @weatherbox.issues.each do |issue| %>
+     <% if issue["status"]=="open" %>
+       <tr>
+         <td><%= issue["issue_id"] %></td>
+         <td><%= issue["title"] %></td>
+         <td><%= issue["description"] %></td>
+         <td><%= issue["date"] %></td>
+       </tr>
+     <% end %>
+   <% end %>
+  </tbody>
+</table>
+
 <%= link_to 'Edit', edit_weatherbox_path(@weatherbox) %> |
 <%= link_to 'Back', weatherboxes_path %>
