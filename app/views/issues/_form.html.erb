@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :status %><br>
-    <%= f.text_field :status %>
+    <%= f.select(:status, [["Open","Open"],["In Progress","In Progress"],["Closed","Closed"]]) %>
   </div>
   <div class="field">
     <%= f.label :date %><br>

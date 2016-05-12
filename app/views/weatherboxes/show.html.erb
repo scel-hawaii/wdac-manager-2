@@ -66,6 +66,7 @@
     <tr>
       <th>Issue ID</th>
       <th>Issue Title</th>
+      <th>Issue Status</th>
       <th>Issue Description</th>
       <th>Date</th>
     </tr>
@@ -73,10 +74,11 @@
   
   <tbody>
    <% @weatherbox.issues.each do |issue| %>
-     <% if issue["status"]=="open" %>
+     <% if issue["status"] == "Open" || issue["status"] == "In Progress" %>
        <tr>
          <td><%= issue["issue_id"] %></td>
          <td><%= issue["title"] %></td>
+         <td><%= issue["status"] %></td>
          <td><%= issue["description"] %></td>
          <td><%= issue["date"] %></td>
        </tr>
