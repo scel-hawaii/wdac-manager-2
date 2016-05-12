@@ -12,10 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :issue_id %><br>
-    <%= f.number_field :issue_id %>
-  </div>
-  <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
@@ -30,10 +26,6 @@
   <div class="field">
     <%= f.label :status %><br>
     <%= f.select(:status, [["Open","Open"],["In Progress","In Progress"],["Closed","Closed"]]) %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
   </div>
   <div class="actions">
     <%= f.submit %>

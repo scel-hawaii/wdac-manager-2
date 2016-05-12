@@ -2,7 +2,7 @@
 
 <p>
   <strong>Issue:</strong>
-  <%= @issue.issue_id %>
+  <%= @issue["id"] %>
 </p>
 
 <p>
@@ -26,9 +26,13 @@
 </p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @issue.date %>
+  <strong>Date Created:</strong>
+  <%= @issue.created_at %>
 </p>
 
+<p>
+  <strong>Date Updated:</strong>
+  <%= @issue.updated_at %>
+</p>
 <%= link_to 'Edit', edit_issue_path(@issue) %> |
 <%= link_to 'Back', issues_path %>

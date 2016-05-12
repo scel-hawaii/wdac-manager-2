@@ -1,1 +1,1 @@
-json.extract! @issue, :id, :issue_id, :title, :description, :weatherbox_id, :status, :date, :created_at, :updated_at
+json.extract! @issue, :id, :title, :description, :weatherbox_id, :status, :created_at, :updated_at
