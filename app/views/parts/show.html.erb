@@ -15,5 +15,13 @@
   <%= @part.description %>
 </p>
 
+<p>
+  <strong>Hardware:</strong>
+  <% if !@part.hardware.nil? %>
+    <%= @part.hardware["name"] %>
+  <% end %>
+</p>
+
+
 <%= link_to 'Edit', edit_part_path(@part) %> |
 <%= link_to 'Back', parts_path %>

@@ -19,6 +19,9 @@
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
+  <div class="field">
+    <%= f.label :hardware_id %><br>
+    <%= f.select(:hardware_id, Hardware.all.collect {|p| [p.name, p.id] }, include_blank: 'None') %>
   <div class="actions">
     <%= f.submit %>
   </div>
